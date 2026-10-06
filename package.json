@@ -1,6 +1,6 @@
 {
   "name": "percent-encoding-decoder",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Decodes percent-encoded strings according to RFC 3986, handling mixed UTF-8 sequences and malformed escapes.",
   "type": "module",
   "main": "src/index.js",
