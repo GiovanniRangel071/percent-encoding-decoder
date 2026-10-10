@@ -31,6 +31,13 @@ The library does not decode `+` to space — that is `application/x-www-form-url
 - `decodeToBytes(input: string, options?: { throwOnMalformed?: boolean }): Uint8Array`
 - `DecodeError` — thrown only in strict mode; carries a `position` property.
 
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
+
 ## License
 
 MIT
