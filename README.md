@@ -38,6 +38,13 @@ sums drift with floating point over long streams, and recomputing from a small
 buffer is cheap enough that the drift is not worth the speed.
 
 
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
+
 ## License
 
 MIT
